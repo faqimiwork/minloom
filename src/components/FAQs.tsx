@@ -415,6 +415,16 @@ export default function FAQs() {
       question: "What format are the videos?",
       answer: "MP4 by default, which plays in WhatsApp, QuickTime, Windows, Google Drive and every editor. You can switch to WebM in settings.",
     },
+    {
+      number: '10.',
+      question: "Can I hide private information while I record?",
+      answer: "Yes. Click Blur, then drag over anything private, like an email or a balance. It turns to frosted glass in your video and stays blurred while you scroll.",
+    },
+    {
+      number: '11.',
+      question: "Can MinLoom take screenshots too?",
+      answer: "Yes. Click Screenshot in the MinLoom menu. You can add a soft background, padding, rounded corners and a shadow, then copy the image or download a PNG.",
+    },
   ];
 
 
@@ -422,7 +432,6 @@ export default function FAQs() {
     <section id="faqs" className="py-12 md:py-16 lg:py-24 bg-white border-b border-neutral-100 overflow-hidden relative select-none">
       <style>{GOOGLE_FONTS_CSS}</style>
       {/* Left Running Camera Roll */}
-      <SectionCameraRolls />
 
       <div className="max-w-[1180px] 2xl:max-w-[1380px] mx-auto px-4 sm:px-6 lg:px-16 2xl:px-24">
         
@@ -445,7 +454,7 @@ export default function FAQs() {
           {/* Left Column: Support Card & Profile */}
           <div className="lg:col-span-4 space-y-4">
             
-            <div className="bg-[#FFC83D] rounded-3xl p-8 sm:p-10 border-[3px] border-neutral-900 shadow-[0_6px_0_#17140F] shadow-[0_4px_24px_rgba(0,0,0,0.03)] text-center flex flex-col items-center justify-center min-h-[260px]">
+            <div className="bg-[#F6F6F7] rounded-3xl p-8 sm:p-10 border border-black/5 shadow-[0_1px_2px_rgba(17,17,19,0.06),0_12px_32px_rgba(17,17,19,0.08)] shadow-[0_4px_24px_rgba(0,0,0,0.03)] text-center flex flex-col items-center justify-center min-h-[260px]">
               <h3 className="text-xl sm:text-2xl font-serif font-bold text-neutral-900 tracking-tight leading-snug max-w-[240px]">
                 Still stuck? A real person reads every email.
               </h3>
@@ -455,7 +464,7 @@ export default function FAQs() {
                 text="Email support"
                 icon={<ChevronRight className="w-4 h-4 text-neutral-400 group-hover:text-white transition-colors ml-1.5" />}
                 iconPosition="right"
-                className="mt-6 px-6 py-3.5 rounded-full bg-[#171412] text-white text-sm font-semibold hover:bg-[#FFC83D] hover:text-neutral-900 transition-all duration-300 flex items-center shadow-md hover:shadow-[0_8px_20px_rgba(246,70,10,0.25)] group cursor-pointer active:scale-95"
+                className="mt-6 px-6 py-3.5 rounded-full bg-neutral-900 text-white text-sm font-semibold hover:bg-neutral-700 transition-all duration-300 flex items-center shadow-md hover:shadow-[0_8px_20px_rgba(246,70,10,0.25)] group cursor-pointer active:scale-95"
               />
             </div>
 
@@ -477,7 +486,7 @@ export default function FAQs() {
               return (
                 <div
                   key={index}
-                  className={`bg-[#FFF8E7] rounded-2xl sm:rounded-3xl border transition-all duration-200 overflow-hidden ${
+                  className={`bg-[#F6F6F7] rounded-2xl sm:rounded-3xl border transition-all duration-200 overflow-hidden ${
                     isOpen
                       ? 'border-neutral-200 shadow-[0_6px_24px_rgba(0,0,0,0.03)]'
                       : 'border-neutral-200/70 hover:border-neutral-300 shadow-2xs'
@@ -494,13 +503,13 @@ export default function FAQs() {
                   >
                     <div className="flex items-baseline gap-3 sm:gap-4 flex-1">
                       <span className={`text-base sm:text-lg font-serif font-bold shrink-0 transition-colors duration-200 ${
-                        isOpen ? 'text-[#E5382C]' : 'text-neutral-900 group-hover:text-[#E5382C]'
+                        isOpen ? 'text-[#A86F05]' : 'text-neutral-900 group-hover:text-[#A86F05]'
                       }`}>
                         {faq.number}
                       </span>
 
                       <span className={`text-lg sm:text-xl md:text-[21px] font-serif font-bold tracking-tight leading-snug transition-colors duration-200 ${
-                        isOpen ? 'text-[#E5382C]' : 'text-neutral-900 group-hover:text-[#E5382C]'
+                        isOpen ? 'text-[#A86F05]' : 'text-neutral-900 group-hover:text-[#A86F05]'
                       }`}>
                         {faq.question}
                       </span>
@@ -508,8 +517,8 @@ export default function FAQs() {
 
                     <div className={`w-8 h-8 sm:w-9 sm:h-9 rounded-full flex items-center justify-center shrink-0 transition-all duration-200 ${
                       isOpen
-                        ? 'bg-[#FFC83D] text-white shadow-sm'
-                        : 'bg-[#171412] text-white group-hover:bg-[#FFC83D]'
+                        ? 'bg-[#F5B83D] text-neutral-900 shadow-sm'
+                        : 'bg-neutral-900 text-white group-hover:bg-neutral-700'
                     }`}>
                       {isOpen ? (
                         <ArrowUp className="w-4 h-4 stroke-[2.5]" />

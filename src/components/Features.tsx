@@ -358,9 +358,9 @@ export default function Features() {
       badge: 'FAVORITE',
       desc: 'Your face in a soft bubble: circle, squircle, soft square or blob, in three sizes. Drag it anywhere and it snaps to a corner with a gentle spring.',
       graphic: (
-        <div className="w-full h-full bg-[#FFF8E7] rounded-xl border-2 border-neutral-900 p-4 flex flex-col justify-between relative overflow-hidden">
+        <div className="w-full h-full bg-[#F6F6F7] rounded-xl border border-black/10 p-4 flex flex-col justify-between relative overflow-hidden">
           <div className="flex items-center justify-between">
-            <span className="text-[10px] font-bold text-neutral-900 bg-[#FFC83D] px-2 py-0.5 rounded-full">4 shapes, 3 sizes</span>
+            <span className="text-[10px] font-bold text-[#A86F05] bg-[#FFF3D6] px-2 py-0.5 rounded-full">4 shapes, 3 sizes</span>
             <span className="text-[9px] text-neutral-500 font-medium">Snaps to corners</span>
           </div>
           <div className="grid grid-cols-2 gap-3 place-items-center my-2">
@@ -373,7 +373,7 @@ export default function Features() {
           </div>
           <div className="bg-white border border-neutral-200 rounded-xl p-2 flex items-center justify-between">
             <span className="text-[10px] font-bold text-neutral-800">Hide or show: Alt + Shift + C</span>
-            <span className="w-6 h-3.5 rounded-full bg-neutral-900 relative"><span className="absolute right-0.5 top-0.5 w-2.5 h-2.5 rounded-full bg-[#FFC83D]" /></span>
+            <span className="w-6 h-3.5 rounded-full bg-neutral-900 relative"><span className="absolute right-0.5 top-0.5 w-2.5 h-2.5 rounded-full bg-[#F5B83D]" /></span>
           </div>
         </div>
       ),
@@ -387,7 +387,7 @@ export default function Features() {
       badge: 'NEW',
       desc: 'While you record, the page shows only your face. Toolbars, tips and buttons step aside, so your video never fills up with our controls.',
       graphic: (
-        <div className="w-full h-full bg-white rounded-xl border-2 border-neutral-900 p-4 flex flex-col gap-3 relative overflow-hidden">
+        <div className="w-full h-full bg-white rounded-xl border border-black/10 p-4 flex flex-col gap-3 relative overflow-hidden">
           <div className="grid grid-cols-2 gap-3 flex-1">
             {[{ l: 'What you see', tools: true }, { l: 'What gets recorded', tools: false }].map((c) => (
               <div key={c.l} className="flex flex-col gap-1.5">
@@ -400,12 +400,12 @@ export default function Features() {
                       <span className="w-2.5 h-2.5 rounded-full bg-white/70" /><span className="w-2.5 h-2.5 rounded-full bg-white/70" /><span className="w-2.5 h-2.5 rounded-full bg-white/70" />
                     </motion.div>
                   )}
-                  {!c.tools && <span className="absolute top-1.5 right-1.5 text-[8px] font-bold bg-[#FFC83D] text-neutral-900 px-1.5 rounded">REC</span>}
+                  {!c.tools && <span className="absolute top-1.5 right-1.5 text-[8px] font-bold bg-[#FFF3D6] text-neutral-900 px-1.5 rounded">REC</span>}
                 </div>
               </div>
             ))}
           </div>
-          <div className="bg-[#FFF8E7] border border-neutral-200 rounded-xl p-2 text-[10px] font-bold text-neutral-800 text-center">Controls come back when you pause</div>
+          <div className="bg-[#F6F6F7] border border-neutral-200 rounded-xl p-2 text-[10px] font-bold text-neutral-800 text-center">Controls come back when you pause</div>
         </div>
       ),
     },
@@ -418,17 +418,17 @@ export default function Features() {
       badge: 'POPULAR',
       desc: 'A tiny window that stays on top of every app, with timer, pause, camera, pen and stop. In Screen mode it carries your camera too, so your face follows you to Canva, Excel or anywhere.',
       graphic: (
-        <div className="w-full h-full bg-[#BFD7F2] rounded-xl border-2 border-neutral-900 p-4 flex flex-col items-center justify-center gap-4 relative overflow-hidden">
+        <div className="w-full h-full bg-[#F6F6F7] rounded-xl border border-black/10 p-4 flex flex-col items-center justify-center gap-4 relative overflow-hidden">
           <div className="w-[150px] bg-neutral-900 rounded-2xl p-2.5 shadow-xl">
-            <div className="rounded-full overflow-hidden border-[3px] border-[#FFC83D] mx-auto w-[110px] h-[110px]"><Face name="leo" className="w-full h-full block" /></div>
+            <div className="rounded-full overflow-hidden border border-[#F5B83D] mx-auto w-[110px] h-[110px]"><Face name="leo" className="w-full h-full block" /></div>
             <div className="mt-2.5 flex items-center gap-1.5">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#FF4B3E] animate-pulse" />
+              <span className="w-1.5 h-1.5 rounded-full bg-[#FF453A] animate-pulse" />
               <span className="text-white text-[11px] font-bold mr-auto">2:41</span>
-              {[0, 1, 2].map((i) => <span key={i} className={`w-5 h-5 rounded-full ${i === 1 ? 'bg-[#FFC83D]' : 'bg-white/15'}`} />)}
-              <span className="w-5 h-5 rounded-full bg-[#FFC83D] flex items-center justify-center"><span className="w-2 h-2 rounded-[2px] bg-neutral-900" /></span>
+              {[0, 1, 2].map((i) => <span key={i} className={`w-5 h-5 rounded-full ${i === 1 ? 'bg-[#F5B83D]' : 'bg-white/15'}`} />)}
+              <span className="w-5 h-5 rounded-full bg-[#F5B83D] flex items-center justify-center"><span className="w-2 h-2 rounded-[2px] bg-neutral-900" /></span>
             </div>
           </div>
-          <span className="text-[10px] font-bold bg-white border border-neutral-900 rounded-full px-2.5 py-1">Always on top, any app</span>
+          <span className="text-[10px] font-bold bg-white border border-black/10 rounded-full px-2.5 py-1">Always on top, any app</span>
         </div>
       ),
     },
@@ -441,15 +441,15 @@ export default function Features() {
       badge: 'HANDY',
       desc: 'Circle what matters with a pen that fades by itself, so you never stop to erase. Every click gets a soft ring, so viewers always know where you clicked.',
       graphic: (
-        <div className="w-full h-full bg-white rounded-xl border-2 border-neutral-900 p-4 flex flex-col justify-between relative overflow-hidden">
+        <div className="w-full h-full bg-white rounded-xl border border-black/10 p-4 flex flex-col justify-between relative overflow-hidden">
           <div className="space-y-2"><div className="h-3 w-2/5 rounded bg-neutral-200" /><div className="h-2 w-4/5 rounded bg-neutral-100" /><div className="h-2 w-3/5 rounded bg-neutral-100" /></div>
           <svg viewBox="0 0 200 80" className="w-full" fill="none">
-            <motion.path d="M20 55c25-35 60-45 90-25s45 25 70-10" stroke="#17140F" strokeWidth="9" strokeLinecap="round" initial={{ pathLength: 0 }} animate={{ pathLength: [0, 1, 1], opacity: [1, 1, 0] }} transition={{ repeat: Infinity, duration: 3.2, times: [0, 0.4, 1] }} />
-            <motion.path d="M20 55c25-35 60-45 90-25s45 25 70-10" stroke="#FF4B3E" strokeWidth="5" strokeLinecap="round" initial={{ pathLength: 0 }} animate={{ pathLength: [0, 1, 1], opacity: [1, 1, 0] }} transition={{ repeat: Infinity, duration: 3.2, times: [0, 0.4, 1] }} />
+            <motion.path d="M20 55c25-35 60-45 90-25s45 25 70-10" stroke="#111113" strokeWidth="9" strokeLinecap="round" initial={{ pathLength: 0 }} animate={{ pathLength: [0, 1, 1], opacity: [1, 1, 0] }} transition={{ repeat: Infinity, duration: 3.2, times: [0, 0.4, 1] }} />
+            <motion.path d="M20 55c25-35 60-45 90-25s45 25 70-10" stroke="#FF453A" strokeWidth="5" strokeLinecap="round" initial={{ pathLength: 0 }} animate={{ pathLength: [0, 1, 1], opacity: [1, 1, 0] }} transition={{ repeat: Infinity, duration: 3.2, times: [0, 0.4, 1] }} />
           </svg>
           <div className="flex items-center justify-between">
             <div className="relative w-14 h-8">
-              <motion.span animate={{ scale: [0.3, 1.4], opacity: [1, 0] }} transition={{ repeat: Infinity, duration: 1.2 }} className="absolute left-3 top-0 w-8 h-8 rounded-full border-[3px] border-neutral-900 bg-[#FFC83D]/60" />
+              <motion.span animate={{ scale: [0.3, 1.4], opacity: [1, 0] }} transition={{ repeat: Infinity, duration: 1.2 }} className="absolute left-3 top-0 w-8 h-8 rounded-full border border-black/10 bg-[#FFF3D6]/60" />
             </div>
             <span className="text-[10px] font-bold text-neutral-700">Pen: Alt + Shift + D</span>
           </div>
@@ -457,40 +457,84 @@ export default function Features() {
       ),
     },
     {
-      id: 'trim',
+      id: 'blur',
       num: '05',
+      title: 'Blur Private Info',
+      shortTitle: 'Blur',
+      circleColor: 'bg-sky-100',
+      badge: 'NEW',
+      desc: 'Drag over an email, a balance or a client name and it turns to frosted glass. It stays blurred while you scroll, so nothing private ends up in your video.',
+      graphic: (
+        <div className="w-full h-full bg-white rounded-xl border border-black/10 p-4 flex flex-col gap-3 relative overflow-hidden">
+          <div className="text-[11px] font-semibold text-neutral-800">Invoice #2041</div>
+          {[['Client', 'Aminah Yusof'], ['Email', 'aminah@studio.my'], ['Amount', 'RM 4,850.00']].map(([k, v], i) => (
+            <div key={k} className="flex items-center justify-between text-[11px] border-b border-black/5 pb-2">
+              <span className="text-neutral-500">{k}</span>
+              <span className="relative font-medium text-neutral-800">
+                {v}
+                {i > 0 && (
+                  <motion.span initial={{ opacity: 0 }} animate={{ opacity: [0, 1, 1, 0] }} transition={{ repeat: Infinity, duration: 4, times: [0, 0.2, 0.85, 1], delay: i * 0.4 }}
+                    className="absolute -inset-1 rounded-md backdrop-blur-[5px] bg-white/30 ring-1 ring-[#F5B83D]/60" />
+                )}
+              </span>
+            </div>
+          ))}
+          <span className="mt-auto self-start text-[10px] font-semibold text-[#A86F05] bg-[#FFF3D6] px-2 py-0.5 rounded-full">Drag to blur, Esc when done</span>
+        </div>
+      ),
+    },
+    {
+      id: 'shot',
+      num: '06',
+      title: 'Beautiful Screenshots',
+      shortTitle: 'Screenshot',
+      circleColor: 'bg-amber-100',
+      badge: 'NEW',
+      desc: 'One click grabs the page. Add a soft background, padding, rounded corners and a shadow, then copy it straight into Slack, Docs or an email.',
+      graphic: (
+        <div className="w-full h-full rounded-xl border border-black/10 p-5 flex items-center justify-center relative overflow-hidden bg-[url('/hero-light.jpg')] bg-cover bg-center">
+          <motion.div animate={{ scale: [0.96, 1, 1, 0.96] }} transition={{ repeat: Infinity, duration: 4 }} className="w-[78%] aspect-[16/10] rounded-xl overflow-hidden bg-white shadow-[0_18px_40px_rgba(17,17,19,0.22)]">
+            <img src="/sites/pocketview-home.jpg" alt="" className="w-full h-full object-cover object-top" />
+          </motion.div>
+          <span className="absolute bottom-3 right-3 text-[10px] font-semibold bg-neutral-900 text-white px-2 py-1 rounded-md">Copied</span>
+        </div>
+      ),
+    },
+    {
+      id: 'trim',
+      num: '07',
       title: 'Trim and Cut',
       shortTitle: 'Trim',
       circleColor: 'bg-pink-100',
       badge: 'EASY',
       desc: 'Keep the good part, or cut a mistake out of the middle. Two handles, one button, a new copy saved. No editor to learn.',
       graphic: (
-        <div className="w-full h-full bg-[#FFF8E7] rounded-xl border-2 border-neutral-900 p-4 flex flex-col justify-between relative overflow-hidden">
-          <div className="grid grid-cols-2 bg-white border-2 border-neutral-900 rounded-lg p-0.5 text-[10px] font-bold text-center w-fit">
-            <span className="px-2.5 py-1">Keep part</span><span className="px-2.5 py-1 bg-neutral-900 text-[#FFC83D] rounded-md">Cut out part</span>
+        <div className="w-full h-full bg-[#F6F6F7] rounded-xl border border-black/10 p-4 flex flex-col justify-between relative overflow-hidden">
+          <div className="grid grid-cols-2 bg-white border border-black/10 rounded-lg p-0.5 text-[10px] font-bold text-center w-fit">
+            <span className="px-2.5 py-1">Keep part</span><span className="px-2.5 py-1 bg-neutral-900 text-[#F5B83D] rounded-md">Cut out part</span>
           </div>
           <div className="relative h-8 my-3">
             <div className="absolute inset-x-0 top-3 h-2.5 rounded-full bg-neutral-200" />
-            <motion.div animate={{ left: ['38%', '42%', '38%'] }} transition={{ repeat: Infinity, duration: 3 }} className="absolute top-3 h-2.5 right-[34%] rounded-full" style={{ background: 'repeating-linear-gradient(45deg,#FF4B3E 0 5px,#FFB3AC 5px 10px)' }} />
-            <span className="absolute top-0.5 left-[37%] w-4 h-7 rounded-md bg-white border-2 border-neutral-900" />
-            <span className="absolute top-0.5 right-[33%] w-4 h-7 rounded-md bg-white border-2 border-neutral-900" />
+            <motion.div animate={{ left: ['38%', '42%', '38%'] }} transition={{ repeat: Infinity, duration: 3 }} className="absolute top-3 h-2.5 right-[34%] rounded-full" style={{ background: 'repeating-linear-gradient(45deg,#FF453A 0 5px,#FFB3AC 5px 10px)' }} />
+            <span className="absolute top-0.5 left-[37%] w-4 h-7 rounded-md bg-white border border-black/10" />
+            <span className="absolute top-0.5 right-[33%] w-4 h-7 rounded-md bg-white border border-black/10" />
           </div>
-          <div className="flex items-center justify-between text-[10px]"><span className="font-bold">Cut out 1:48 to 2:24</span><span className="bg-[#FFC83D] border-2 border-neutral-900 rounded-md px-2 py-0.5 font-bold">Save copy</span></div>
+          <div className="flex items-center justify-between text-[10px]"><span className="font-bold">Cut out 1:48 to 2:24</span><span className="bg-[#FFF3D6] border border-black/10 rounded-md px-2 py-0.5 font-bold">Save copy</span></div>
         </div>
       ),
     },
     {
       id: 'safe',
-      num: '06',
+      num: '08',
       title: 'Never Lose a Take',
       shortTitle: 'Safe',
       circleColor: 'bg-amber-100',
       badge: 'PEACE OF MIND',
       desc: 'MinLoom saves your video every 2 seconds. If Chrome crashes or the laptop dies, open MinLoom and recover it in one click. It also warns you if your mic goes silent.',
       graphic: (
-        <div className="w-full h-full bg-white rounded-xl border-2 border-neutral-900 p-4 flex flex-col justify-between relative overflow-hidden">
+        <div className="w-full h-full bg-white rounded-xl border border-black/10 p-4 flex flex-col justify-between relative overflow-hidden">
           <div className="flex items-center justify-between">
-            <span className="text-[10px] font-bold text-neutral-900 bg-[#FFC83D] px-2 py-0.5 rounded-full">Autosave</span>
+            <span className="text-[10px] font-bold text-[#A86F05] bg-[#FFF3D6] px-2 py-0.5 rounded-full">Autosave</span>
             <span className="text-[9px] text-neutral-500">every 2 s</span>
           </div>
           <div className="flex items-end gap-1 h-16 my-2">
@@ -498,9 +542,9 @@ export default function Features() {
               <motion.span key={i} initial={{ opacity: 0.2 }} animate={{ opacity: [0.2, 1, 1] }} transition={{ repeat: Infinity, duration: 3.2, delay: i * 0.18 }} className="flex-1 h-full rounded bg-neutral-900" />
             ))}
           </div>
-          <div className="bg-[#FFF8E7] border-2 border-neutral-900 rounded-xl p-2 flex items-center justify-between">
+          <div className="bg-[#F6F6F7] border border-black/10 rounded-xl p-2 flex items-center justify-between">
             <span className="text-[10px] font-bold text-neutral-800">Recording interrupted</span>
-            <span className="text-[9px] font-bold bg-[#FFC83D] border border-neutral-900 rounded px-1.5 py-0.5">Recover video</span>
+            <span className="text-[9px] font-bold bg-[#FFF3D6] border border-black/10 rounded px-1.5 py-0.5">Recover video</span>
           </div>
         </div>
       ),
@@ -511,7 +555,6 @@ export default function Features() {
     <section id="features" className="py-12 md:py-16 lg:py-24 bg-white border-b border-neutral-100 overflow-hidden relative">
       <style>{GOOGLE_FONTS_CSS}</style>
       {/* Left Running Camera Roll */}
-      <SectionCameraRolls />
 
       <div className="max-w-[1180px] 2xl:max-w-[1380px] mx-auto px-4 sm:px-6 lg:px-16 2xl:px-24">
         
@@ -525,7 +568,7 @@ export default function Features() {
           </div>
           <div className="lg:col-span-5 space-y-6 text-left">
             <p className="text-base sm:text-lg text-neutral-500 font-normal leading-relaxed">
-              Everything you need for tutorials, lessons and quick updates, without menus inside menus. Six things MinLoom does better.
+              Everything you need for tutorials, lessons and quick updates, without menus inside menus. Eight things MinLoom does better.
             </p>
             <div>
               <AnimatedInteractiveButton
@@ -533,7 +576,7 @@ export default function Features() {
                 text="Add to Chrome"
                 icon={<span className="ml-2.5">→</span>}
                 iconPosition="right"
-                className="inline-flex items-center px-6 py-3.5 bg-neutral-950 hover:bg-[#FFC83D] hover:text-neutral-900 text-white font-semibold text-sm rounded-full transition-all duration-300 shadow-md shadow-neutral-950/5 group"
+                className="inline-flex items-center px-6 py-3.5 bg-neutral-950 hover:bg-[#FFF3D6] hover:text-neutral-900 text-white font-semibold text-sm rounded-full transition-all duration-300 shadow-md shadow-neutral-950/5 group"
               />
             </div>
           </div>
@@ -553,7 +596,7 @@ export default function Features() {
                 className={`transition-all duration-700 ease-[0.16,1,0.3,1] relative overflow-hidden border rounded-2xl ${
                   isActive
                     ? 'flex-1 bg-neutral-50/40 border-neutral-300 shadow-sm p-8 flex gap-8 items-center cursor-default'
-                    : 'w-[78px] bg-white border-neutral-200 hover:border-neutral-300 hover:bg-neutral-50/50 flex flex-col justify-between items-center py-8 cursor-pointer'
+                    : 'w-[58px] bg-white border-neutral-200 hover:border-neutral-300 hover:bg-neutral-50/50 flex flex-col justify-between items-center py-8 cursor-pointer'
                 }`}
               >
                 {isActive ? (
@@ -563,11 +606,11 @@ export default function Features() {
                     transition={{ duration: 0.5 }}
                     className="grid grid-cols-12 gap-6 w-full h-full items-center"
                   >
-                    <div className="col-span-7 flex flex-col justify-between h-full py-2">
+                    <div className="col-span-6 flex flex-col justify-between h-full py-2">
                       <div>
                         <div className="flex items-center gap-3 mb-6">
                           <span className="text-sm font-bold text-neutral-400 font-mono">Feature {service.num}</span>
-                          <span className="text-[9px] font-mono font-bold bg-amber-100 text-[#E5382C] px-2.5 py-0.5 rounded-full uppercase tracking-wider">
+                          <span className="text-[9px] font-mono font-bold bg-amber-100 text-[#A86F05] px-2.5 py-0.5 rounded-full uppercase tracking-wider">
                             {service.badge}
                           </span>
                         </div>
@@ -587,12 +630,12 @@ export default function Features() {
                           text="Try it free"
                           icon={<MoveRight className="w-4 h-4 ml-1.5" />}
                           iconPosition="right"
-                          className="text-sm font-bold text-neutral-800 hover:text-[#E5382C] inline-flex items-center border-b border-neutral-800 hover:border-[#FFC83D] pb-0.5 transition-colors group"
+                          className="text-sm font-bold text-neutral-800 hover:text-[#A86F05] inline-flex items-center border-b border-neutral-800 hover:border-[#F5B83D] pb-0.5 transition-colors group"
                         />
                       </div>
                     </div>
 
-                    <div className="col-span-5 h-full flex items-center justify-center">
+                    <div className="col-span-6 h-full flex items-center justify-center">
                       <div className="w-full aspect-square max-h-[360px]">
                         {service.graphic}
                       </div>
@@ -629,7 +672,7 @@ export default function Features() {
                   <div>
                     <div className="flex items-center gap-2 mb-4">
                       <span className="text-xs font-bold text-neutral-400 font-mono">Feature {service.num}</span>
-                      <span className="text-[8px] font-mono font-bold bg-amber-100 text-[#E5382C] px-2.5 py-0.5 rounded-full uppercase tracking-wider">
+                      <span className="text-[8px] font-mono font-bold bg-amber-100 text-[#A86F05] px-2.5 py-0.5 rounded-full uppercase tracking-wider">
                         {service.badge}
                       </span>
                     </div>
@@ -649,7 +692,7 @@ export default function Features() {
                       text="Try it free"
                       icon={<MoveRight className="w-3.5 h-3.5 ml-1.5" />}
                       iconPosition="right"
-                      className="text-xs sm:text-sm font-bold text-neutral-800 hover:text-[#E5382C] inline-flex items-center border-b border-neutral-800 hover:border-[#FFC83D] pb-0.5 transition-colors group"
+                      className="text-xs sm:text-sm font-bold text-neutral-800 hover:text-[#A86F05] inline-flex items-center border-b border-neutral-800 hover:border-[#F5B83D] pb-0.5 transition-colors group"
                     />
                   </div>
                 </div>
@@ -681,7 +724,7 @@ export default function Features() {
                   <div>
                     <div className="flex items-center gap-2 mb-3">
                       <span className="text-[10px] font-bold text-neutral-400 font-mono">Feature {service.num}</span>
-                      <span className="text-[8px] font-mono font-bold bg-amber-100 text-[#E5382C] px-2.5 py-0.5 rounded-full uppercase tracking-wider">
+                      <span className="text-[8px] font-mono font-bold bg-amber-100 text-[#A86F05] px-2.5 py-0.5 rounded-full uppercase tracking-wider">
                         {service.badge}
                       </span>
                     </div>
@@ -701,7 +744,7 @@ export default function Features() {
                       text="Try it free"
                       icon={<MoveRight className="w-3 h-3 ml-1.5" />}
                       iconPosition="right"
-                      className="text-xs font-bold text-neutral-800 hover:text-[#E5382C] inline-flex items-center border-b border-neutral-800 hover:border-[#FFC83D] pb-0.5 transition-colors group"
+                      className="text-xs font-bold text-neutral-800 hover:text-[#A86F05] inline-flex items-center border-b border-neutral-800 hover:border-[#F5B83D] pb-0.5 transition-colors group"
                     />
                   </div>
                 </div>

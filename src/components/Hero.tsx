@@ -323,7 +323,7 @@ function NavbarHeader({ onStartInteractive }: { onStartInteractive: () => void }
       <nav
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           scrolled
-            ? 'bg-[#FFF8E7]/80 backdrop-blur-md py-2.5 shadow-md border-b border-amber-100'
+            ? 'bg-white/80 backdrop-blur-xl py-2.5 border-b border-black/5'
             : 'bg-transparent py-3.5'
         }`}
       >
@@ -337,7 +337,7 @@ function NavbarHeader({ onStartInteractive }: { onStartInteractive: () => void }
               <a
                 key={link.name}
                 href={link.href}
-                className="text-[15px] font-medium text-neutral-600/80 hover:text-[#E5382C] transition-colors flex items-center gap-1"
+                className="text-[15px] font-medium text-neutral-600/80 hover:text-[#A86F05] transition-colors flex items-center gap-1"
               >
                 {link.name}
                 {link.hasDropdown && (
@@ -351,7 +351,7 @@ function NavbarHeader({ onStartInteractive }: { onStartInteractive: () => void }
             <AnimatedInteractiveButton
               href={INSTALL_HREF}
               text="Add to Chrome, free"
-              className="px-6 py-2.5 bg-[#FFC83D] hover:bg-neutral-900 hover:text-[#FFC83D] text-neutral-900 border-2 border-neutral-900 rounded-full text-sm font-bold transition-all cursor-pointer shadow-[0_3px_0_#17140F] inline-flex items-center justify-center"
+              className="px-6 py-2.5 bg-neutral-900 hover:bg-neutral-700 text-white border border-neutral-900 shadow-[0_1px_2px_rgba(17,17,19,0.12),0_8px_20px_rgba(17,17,19,0.12)] rounded-full text-sm font-bold transition-all cursor-pointer inline-flex items-center justify-center"
             />
           </div>
 
@@ -360,7 +360,7 @@ function NavbarHeader({ onStartInteractive }: { onStartInteractive: () => void }
             className="lg:hidden h-[42px] px-3 bg-white border border-neutral-200 hover:border-neutral-300 rounded-xl text-neutral-700 flex items-center gap-2 shadow-sm transition-all active:scale-95 cursor-pointer shrink-0"
           >
             <span className="text-xs font-semibold uppercase tracking-wider text-neutral-500 hidden sm:inline leading-none">Menu</span>
-            {mobileMenuOpen ? <X className="w-5 h-5 text-[#E5382C] shrink-0" /> : <Menu className="w-5 h-5 shrink-0" />}
+            {mobileMenuOpen ? <X className="w-5 h-5 text-[#A86F05] shrink-0" /> : <Menu className="w-5 h-5 shrink-0" />}
           </button>
 
           <AnimatePresence>
@@ -377,7 +377,7 @@ function NavbarHeader({ onStartInteractive }: { onStartInteractive: () => void }
                     key={link.name}
                     href={link.href}
                     onClick={() => setMobileMenuOpen(false)}
-                    className="text-base font-semibold text-neutral-700 hover:text-[#E5382C] transition-colors py-1 flex justify-between items-center"
+                    className="text-base font-semibold text-neutral-700 hover:text-[#A86F05] transition-colors py-1 flex justify-between items-center"
                   >
                     <span>{link.name}</span>
                     {link.hasDropdown && <span className="text-xs text-neutral-400">&#9656;</span>}
@@ -388,7 +388,7 @@ function NavbarHeader({ onStartInteractive }: { onStartInteractive: () => void }
                   <a
                     href={INSTALL_HREF}
                     onClick={() => setMobileMenuOpen(false)}
-                    className="w-full py-2.5 bg-[#FFC83D] border-2 border-neutral-900 text-neutral-900 rounded-full font-bold text-center"
+                    className="w-full py-2.5 bg-neutral-900 hover:bg-neutral-700 text-white border border-neutral-900 shadow-[0_1px_2px_rgba(17,17,19,0.12),0_8px_20px_rgba(17,17,19,0.12)] rounded-full font-bold text-center"
                   >
                     Add to Chrome, it's free
                   </a>
@@ -463,16 +463,8 @@ export default function Hero({ onStartInteractive = () => {} }: HeroProps) {
       <NavbarHeader onStartInteractive={onStartInteractive} />
 
       {/* 2. Hero Section */}
-      <section className="relative min-h-[92vh] flex items-center justify-center bg-[#FFF8E7] pt-28 sm:pt-32 pb-12 px-4 sm:px-6 lg:px-8 overflow-hidden">
-        {/* Left Running Camera Roll */}
-        <SectionCameraRolls />
-
-        {/* Abstract Design Accents */}
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-gradient-to-br from-amber-200/40 to-amber-200/10 rounded-full blur-3xl -z-10" />
-        <div className="absolute bottom-10 right-1/4 w-[500px] h-[500px] bg-gradient-to-tr from-amber-100/30 to-rose-200/20 rounded-full blur-3xl -z-10" />
-
-        {/* Decorative Grid overlay */}
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:14px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] -z-10" />
+      <section className="relative bg-white pt-[68px] px-3 sm:px-4 pb-6">
+        <div className="relative rounded-[28px] sm:rounded-[36px] overflow-hidden bg-[url('/hero-light.jpg')] bg-cover bg-center pt-16 sm:pt-24 pb-10 px-4 sm:px-6 lg:px-8 ring-1 ring-black/5">
 
         <div className="w-full max-w-[1180px] 2xl:max-w-[1380px] mx-auto px-0 sm:px-6 lg:px-16 2xl:px-24 text-center relative z-10">
           <motion.div
@@ -485,16 +477,16 @@ export default function Hero({ onStartInteractive = () => {} }: HeroProps) {
             {/* Tagline Badge */}
             <motion.div
               variants={itemVariants}
-              className="mb-6 inline-flex items-center gap-2 bg-white border-2 border-neutral-900 rounded-full px-4 py-1.5 text-sm text-neutral-900 shadow-[0_3px_0_#17140F]"
+              className="mb-7 inline-flex items-center gap-2 bg-white/70 backdrop-blur border border-black/5 rounded-full px-3.5 py-1.5 text-[13px] text-neutral-800 shadow-[0_1px_2px_rgba(17,17,19,0.05)]"
             >
-              <span className="flex h-2 w-2 rounded-full bg-[#FFC83D] animate-pulse" />
-              <span className="font-medium tracking-tight">MinLoom for Chrome</span>
+              <span className="flex h-2 w-2 rounded-full bg-[#FF453A] animate-pulse" />
+              <span className="font-medium tracking-tight">Now with Camera mode, Blur and Screenshots</span>
             </motion.div>
 
             {/* Majestic Hero Heading */}
             <motion.h1
               variants={itemVariants}
-              className="text-[44px] sm:text-6xl md:text-[76px] lg:text-[84px] tracking-tight leading-[1.1] sm:leading-[1.05] text-neutral-900 font-serif max-w-4xl"
+              className="text-[44px] sm:text-6xl md:text-[72px] lg:text-[80px] leading-[1.04] text-neutral-900 font-serif max-w-4xl"
             >
               Show it. Say it.<br />
               <span className="ml-mark">Send the MP4.</span>
@@ -516,18 +508,18 @@ export default function Hero({ onStartInteractive = () => {} }: HeroProps) {
               <AnimatedInteractiveButton
                 href={INSTALL_HREF}
                 text="Add to Chrome, it's free"
-                className="px-6 sm:px-10 py-4 bg-[#FFC83D] hover:bg-neutral-900 hover:text-[#FFC83D] text-neutral-900 border-[3px] border-neutral-900 rounded-full font-bold text-base sm:text-lg transition-all duration-300 shadow-[0_5px_0_#17140F] flex items-center justify-center cursor-pointer w-full sm:min-w-[260px] sm:whitespace-nowrap"
+                className="px-6 sm:px-10 py-4 bg-neutral-900 hover:bg-neutral-700 text-white border border-neutral-900 shadow-[0_1px_2px_rgba(17,17,19,0.12),0_8px_20px_rgba(17,17,19,0.12)] rounded-full font-bold text-base sm:text-lg transition-all duration-300 flex items-center justify-center cursor-pointer w-full sm:min-w-[260px] sm:whitespace-nowrap"
               />
 
               <AnimatedInteractiveButton
                 href="#how-it-works"
                 text="See how it works"
-                className="px-6 sm:px-10 py-4 bg-white hover:bg-neutral-50 text-neutral-900 border-[3px] border-neutral-900 rounded-full font-bold text-base transition-all duration-300 flex items-center justify-center cursor-pointer w-full sm:min-w-[220px] sm:whitespace-nowrap"
+                className="px-6 sm:px-10 py-4 bg-white hover:bg-neutral-50 text-neutral-900 border border-black/10 rounded-full font-bold text-base transition-all duration-300 flex items-center justify-center cursor-pointer w-full sm:min-w-[220px] sm:whitespace-nowrap"
               />
             </motion.div>
             <motion.div variants={itemVariants} className="mt-5 flex flex-wrap justify-center gap-x-5 gap-y-2 text-sm font-semibold text-neutral-700">
               {['Works on Chrome, Edge and Brave', 'Mac and Windows', 'Videos stay on your computer'].map((t) => (
-                <span key={t} className="inline-flex items-center gap-1.5"><span className="w-4 h-4 rounded-full bg-neutral-900 text-[#FFC83D] text-[10px] flex items-center justify-center">✓</span>{t}</span>
+                <span key={t} className="inline-flex items-center gap-1.5"><span className="w-4 h-4 rounded-full bg-neutral-900 text-[#F5B83D] text-[10px] flex items-center justify-center">✓</span>{t}</span>
               ))}
             </motion.div>
           </motion.div>
@@ -546,11 +538,9 @@ export default function Hero({ onStartInteractive = () => {} }: HeroProps) {
           >
             <div className="relative px-2 sm:px-6 pt-12 pb-6">
               <ProductDemo />
-              <div className="hidden md:block absolute -left-2 top-24 rotate-[-6deg] bg-[#FF4B3E] text-white font-bold text-sm border-[3px] border-neutral-900 rounded-xl px-3 py-1.5 shadow-[0_4px_0_#17140F]">No watermark</div>
-              <div className="hidden md:block absolute -right-2 top-40 rotate-[5deg] bg-white text-neutral-900 font-bold text-sm border-[3px] border-neutral-900 rounded-xl px-3 py-1.5 shadow-[0_4px_0_#17140F]">No account needed</div>
-              <div className="hidden md:block absolute right-10 -bottom-1 rotate-[-3deg] bg-[#FFC83D] text-neutral-900 font-bold text-sm border-[3px] border-neutral-900 rounded-xl px-3 py-1.5 shadow-[0_4px_0_#17140F]">Saved every 2 seconds</div>
             </div>
           </motion.div>
+        </div>
         </div>
       </section>
     </>

@@ -365,8 +365,8 @@ export default function ProductShowcase() {
   const editorFeatures = [
     {
       icon: <Cpu className="w-5 h-5 text-neutral-900" />,
-      title: "Tab, Window or Screen",
-      desc: "Record one tab with its sound, one app window, or your whole screen. Switch modes in one tap from the same small panel.",
+      title: "Tab, Window, Screen or Camera",
+      desc: "Record one tab with its sound, one app window, your whole screen, or just yourself on camera. Switch modes in one tap.",
     },
     {
       icon: <Sliders className="w-5 h-5 text-neutral-900" />,
@@ -385,11 +385,10 @@ export default function ProductShowcase() {
     <section 
       id="demo" 
       ref={sectionRef} 
-      className="py-12 md:py-16 lg:py-24 bg-[#FFF8E7] border-b border-neutral-100 overflow-hidden relative min-h-[140vh]"
+      className="py-12 md:py-16 lg:py-24 bg-[#F6F6F7] border-b border-neutral-100 overflow-hidden relative min-h-[140vh]"
     >
       <style>{GOOGLE_FONTS_CSS}</style>
       {/* Left Running Camera Roll */}
-      <SectionCameraRolls />
 
       <div className="absolute top-20 right-10 w-96 h-96 bg-amber-100/30 rounded-full blur-3xl -z-10" />
       <div className="absolute bottom-10 left-10 w-80 h-80 bg-amber-50/50 rounded-full blur-3xl -z-10" />
@@ -449,7 +448,7 @@ export default function ProductShowcase() {
 
                     {scrollProgress < 0.1 && (
                       <div className="absolute inset-0 bg-neutral-950 flex flex-col items-center justify-center text-center p-6 z-10">
-                        <PlayCircle className="w-12 h-12 text-[#E5382C] mb-2 animate-pulse" />
+                        <PlayCircle className="w-12 h-12 text-[#A86F05] mb-2 animate-pulse" />
                         <span className="text-xs font-mono text-neutral-400">Scroll to open</span>
                       </div>
                     )}
@@ -491,13 +490,13 @@ export default function ProductShowcase() {
               {editorFeatures.map((feat, i) => (
                 <div 
                   key={i} 
-                  className="flex flex-col gap-4 p-6 rounded-2xl bg-white border border-neutral-200/80 hover:border-[#FFC83D]/40 hover:shadow-md hover:shadow-amber-500/5 transition-all duration-300 group"
+                  className="flex flex-col gap-4 p-6 rounded-2xl bg-white border border-neutral-200/80 hover:border-[#F5B83D]/40 hover:shadow-md hover:shadow-amber-500/5 transition-all duration-300 group"
                 >
-                  <div className="w-10 h-10 rounded-xl bg-[#FFC83D] border-2 border-neutral-900 flex items-center justify-center shrink-0 group-hover:bg-[#FFC83D]/10 transition-colors">
+                  <div className="w-10 h-10 rounded-xl bg-[#FFF3D6] border border-black/10 flex items-center justify-center shrink-0 group-hover:bg-[#FFE7A3] transition-colors">
                     {feat.icon}
                   </div>
                   <div>
-                    <h4 className="text-base font-bold text-neutral-900 group-hover:text-[#E5382C] transition-colors">{feat.title}</h4>
+                    <h4 className="text-base font-bold text-neutral-900 group-hover:text-[#A86F05] transition-colors">{feat.title}</h4>
                     <p className="text-xs sm:text-sm text-neutral-500 mt-2 leading-relaxed">{feat.desc}</p>
                   </div>
                 </div>
@@ -511,7 +510,7 @@ export default function ProductShowcase() {
                   Chrome, Edge and Brave on Mac, Windows, ChromeOS and Linux. Your videos are saved on your own computer, never on our servers.
                 </p>
               </div>
-              <a href={INSTALL_HREF} className="text-sm font-bold bg-[#FFC83D] hover:bg-white px-6 py-3 rounded-full text-neutral-900 border-2 border-[#FFC83D] transition-colors shrink-0">Add to Chrome, free</a>
+              <a href={INSTALL_HREF} className="text-sm font-bold bg-neutral-900 hover:bg-neutral-700 text-white border border-neutral-900 shadow-[0_1px_2px_rgba(17,17,19,0.12),0_8px_20px_rgba(17,17,19,0.12)] px-6 py-3 rounded-full  transition-colors shrink-0">Add to Chrome, free</a>
             </div>
 
           </div>

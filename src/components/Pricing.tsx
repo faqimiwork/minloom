@@ -453,10 +453,9 @@ export default function Pricing() {
 
 
   return (
-    <section id="pricing" className="py-12 md:py-16 lg:py-24 bg-[#FFF8E7] border-b border-neutral-100 overflow-hidden relative select-none">
+    <section id="pricing" className="py-12 md:py-16 lg:py-24 bg-[#F6F6F7] border-b border-neutral-100 overflow-hidden relative select-none">
       <style>{GOOGLE_FONTS_CSS}</style>
       {/* Left Running Camera Roll */}
-      <SectionCameraRolls />
 
       <div className="max-w-[1180px] 2xl:max-w-[1380px] mx-auto px-4 sm:px-6 lg:px-16 2xl:px-24">
         
@@ -487,8 +486,8 @@ export default function Pricing() {
                 transition={{ duration: 0.5, delay: index * 0.1, ease: [0.16, 1, 0.3, 1] as const }}
                 className={`w-full rounded-[32px] p-8 sm:p-12 flex flex-col justify-between transition-all duration-300 ${
                   isDark
-                    ? 'bg-[#17140F] text-white shadow-2xl border-[3px] border-neutral-900'
-                    : 'bg-white text-neutral-900 border-[3px] border-neutral-900 shadow-[0_8px_0_#17140F]'
+                    ? 'bg-[#111113] text-white shadow-2xl border border-black/10'
+                    : 'bg-white text-neutral-900 border border-black/10 shadow-[0_1px_2px_rgba(17,17,19,0.06),0_12px_32px_rgba(17,17,19,0.08)]'
                 }`}
               >
                 <div>
@@ -522,8 +521,8 @@ export default function Pricing() {
                       text={plan.btnLabel}
                       className={`w-full py-4 rounded-full font-bold text-base transition-all flex items-center justify-center cursor-pointer shadow-sm active:scale-[0.99] ${
                         isDark
-                          ? 'bg-white text-neutral-900 hover:bg-[#FFC83D]'
-                          : 'bg-[#FFC83D] text-neutral-900 border-[3px] border-neutral-900 shadow-[0_5px_0_#17140F] hover:bg-neutral-900 hover:text-[#FFC83D]'
+                          ? 'bg-white text-neutral-900 hover:bg-neutral-100'
+                          : 'bg-neutral-900 text-white border border-neutral-900 hover:bg-neutral-700 hover:text-white'
                       }`}
                     />
                   </div>
@@ -540,7 +539,7 @@ export default function Pricing() {
                         {plan.featuresLeft.map((feat, idx) => (
                           <div key={idx} className="flex items-center gap-2.5">
                             <Check className={`w-4 h-4 shrink-0 stroke-[2.5] ${
-                              isDark ? 'text-[#FFC83D]' : 'text-neutral-900'
+                              isDark ? 'text-[#F5B83D]' : 'text-neutral-900'
                             }`} />
                             <span className={`text-sm font-normal leading-tight ${
                               isDark ? 'text-neutral-300/80' : 'text-neutral-600/90'
@@ -555,7 +554,7 @@ export default function Pricing() {
                         {plan.featuresRight.map((feat, idx) => (
                           <div key={idx} className="flex items-center gap-2.5">
                             <Check className={`w-4 h-4 shrink-0 stroke-[2.5] ${
-                              isDark ? 'text-[#FFC83D]' : 'text-neutral-900'
+                              isDark ? 'text-[#F5B83D]' : 'text-neutral-900'
                             }`} />
                             <span className={`text-sm font-normal leading-tight ${
                               isDark ? 'text-neutral-300/80' : 'text-neutral-600/90'

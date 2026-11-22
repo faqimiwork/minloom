@@ -252,7 +252,6 @@ export default function Matrics() {
     <section id="metrics" className="py-12 md:py-16 lg:py-24 px-4 sm:px-6 lg:px-8 bg-[#FFFEFF] border-b border-neutral-100 overflow-hidden relative">
       <style>{GOOGLE_FONTS_CSS}</style>
       {/* Left Running Camera Roll */}
-      <SectionCameraRolls />
 
       <div className="max-w-[1180px] 2xl:max-w-[1380px] mx-auto px-4 sm:px-6 lg:px-16 2xl:px-24">
         
@@ -287,13 +286,13 @@ export default function Matrics() {
             className="lg:col-span-5 rounded-[28px] overflow-hidden relative bg-neutral-950 p-8 sm:p-10 flex flex-col justify-between min-h-[460px] lg:min-h-[520px] shadow-xl border border-neutral-800 group"
           >
             <div className="absolute inset-0 z-0 overflow-hidden">
-              <div className="absolute -right-16 -top-10 w-[360px] h-[360px] rounded-full overflow-hidden border-[6px] border-[#FFC83D] opacity-70 group-hover:scale-105 transition-transform duration-700"><Face name="leo" className="w-full h-full block" /></div>
+              <div className="absolute -right-16 -top-10 w-[360px] h-[360px] rounded-full overflow-hidden border-[6px] border-[#F5B83D] opacity-70 group-hover:scale-105 transition-transform duration-700"><Face name="leo" className="w-full h-full block" /></div>
               <div className="absolute inset-0 bg-gradient-to-t from-neutral-950 via-neutral-950/70 to-neutral-950/40" />
             </div>
 
             <div className="relative z-10">
               <div className="flex items-center gap-2 mb-4">
-                <span className="w-1.5 h-1.5 rounded-full bg-[#FFC83D]" />
+                <span className="w-1.5 h-1.5 rounded-full bg-[#F5B83D]" />
                 <span className="text-xs sm:text-sm font-medium text-neutral-300 tracking-wide">
                   Built by Nota Tech
                 </span>
@@ -315,13 +314,13 @@ export default function Matrics() {
             {/* Card 1: 84% */}
             <motion.div
               variants={itemVariants}
-              className="bg-white rounded-[26px] p-7 sm:p-8 border-[3px] border-neutral-900 shadow-[0_5px_0_#17140F] shadow-[0_4px_24px_rgba(0,0,0,0.03)] hover:shadow-[0_12px_32px_rgba(246,70,10,0.08)] hover:border-amber-200/70 transition-all duration-300 flex flex-col justify-between"
+              className="bg-white rounded-[26px] p-7 sm:p-8 border border-black/10 shadow-[0_1px_2px_rgba(17,17,19,0.06),0_12px_32px_rgba(17,17,19,0.08)] shadow-[0_4px_24px_rgba(0,0,0,0.03)] hover:shadow-[0_12px_32px_rgba(246,70,10,0.08)] hover:border-amber-200/70 transition-all duration-300 flex flex-col justify-between"
             >
               <div className="flex items-start justify-between">
                 <span className="text-5xl sm:text-6xl font-serif font-bold text-neutral-900 tracking-tight">
                   <AnimatedCounter from={0} to={2} suffix="s" />
                 </span>
-                <div className="w-11 h-11 rounded-2xl bg-[#FFC83D] border-2 border-neutral-900 flex items-center justify-center shrink-0 shadow-xs">
+                <div className="w-11 h-11 rounded-2xl bg-[#FFF3D6] border border-black/10 flex items-center justify-center shrink-0 shadow-xs">
                   <Zap className="w-5 h-5 text-neutral-900" strokeWidth={2.2} />
                 </div>
               </div>
@@ -339,13 +338,13 @@ export default function Matrics() {
             {/* Card 2: 3 in 5 */}
             <motion.div
               variants={itemVariants}
-              className="bg-white rounded-[26px] p-7 sm:p-8 border-[3px] border-neutral-900 shadow-[0_5px_0_#17140F] shadow-[0_4px_24px_rgba(0,0,0,0.03)] hover:shadow-[0_12px_32px_rgba(246,70,10,0.08)] hover:border-amber-200/70 transition-all duration-300 flex flex-col justify-between"
+              className="bg-white rounded-[26px] p-7 sm:p-8 border border-black/10 shadow-[0_1px_2px_rgba(17,17,19,0.06),0_12px_32px_rgba(17,17,19,0.08)] shadow-[0_4px_24px_rgba(0,0,0,0.03)] hover:shadow-[0_12px_32px_rgba(246,70,10,0.08)] hover:border-amber-200/70 transition-all duration-300 flex flex-col justify-between"
             >
               <div className="flex items-start justify-between">
                 <span className="text-5xl sm:text-6xl font-serif font-bold text-neutral-900 tracking-tight flex items-center gap-1.5">
                   <AnimatedCounter from={0} to={0} />
                 </span>
-                <div className="w-11 h-11 rounded-2xl bg-[#FFC83D] border-2 border-neutral-900 flex items-center justify-center shrink-0 shadow-xs">
+                <div className="w-11 h-11 rounded-2xl bg-[#FFF3D6] border border-black/10 flex items-center justify-center shrink-0 shadow-xs">
                   <Heart className="w-5 h-5 text-neutral-900" strokeWidth={2.2} />
                 </div>
               </div>
@@ -363,13 +362,13 @@ export default function Matrics() {
             {/* Card 3: $5M+ */}
             <motion.div
               variants={itemVariants}
-              className="bg-white rounded-[26px] p-7 sm:p-8 border-[3px] border-neutral-900 shadow-[0_5px_0_#17140F] shadow-[0_4px_24px_rgba(0,0,0,0.03)] hover:shadow-[0_12px_32px_rgba(246,70,10,0.08)] hover:border-amber-200/70 transition-all duration-300 flex flex-col justify-between"
+              className="bg-white rounded-[26px] p-7 sm:p-8 border border-black/10 shadow-[0_1px_2px_rgba(17,17,19,0.06),0_12px_32px_rgba(17,17,19,0.08)] shadow-[0_4px_24px_rgba(0,0,0,0.03)] hover:shadow-[0_12px_32px_rgba(246,70,10,0.08)] hover:border-amber-200/70 transition-all duration-300 flex flex-col justify-between"
             >
               <div className="flex items-start justify-between">
                 <span className="text-5xl sm:text-6xl font-serif font-bold text-neutral-900 tracking-tight">
                   <span>∞</span>
                 </span>
-                <div className="w-11 h-11 rounded-2xl bg-[#FFC83D] border-2 border-neutral-900 flex items-center justify-center shrink-0 shadow-xs">
+                <div className="w-11 h-11 rounded-2xl bg-[#FFF3D6] border border-black/10 flex items-center justify-center shrink-0 shadow-xs">
                   <Clock className="w-5 h-5 text-neutral-900" strokeWidth={2.2} />
                 </div>
               </div>
@@ -387,13 +386,13 @@ export default function Matrics() {
             {/* Card 4: 95% */}
             <motion.div
               variants={itemVariants}
-              className="bg-white rounded-[26px] p-7 sm:p-8 border-[3px] border-neutral-900 shadow-[0_5px_0_#17140F] shadow-[0_4px_24px_rgba(0,0,0,0.03)] hover:shadow-[0_12px_32px_rgba(246,70,10,0.08)] hover:border-amber-200/70 transition-all duration-300 flex flex-col justify-between"
+              className="bg-white rounded-[26px] p-7 sm:p-8 border border-black/10 shadow-[0_1px_2px_rgba(17,17,19,0.06),0_12px_32px_rgba(17,17,19,0.08)] shadow-[0_4px_24px_rgba(0,0,0,0.03)] hover:shadow-[0_12px_32px_rgba(246,70,10,0.08)] hover:border-amber-200/70 transition-all duration-300 flex flex-col justify-between"
             >
               <div className="flex items-start justify-between">
                 <span className="text-5xl sm:text-6xl font-serif font-bold text-neutral-900 tracking-tight">
                   <AnimatedCounter from={0} to={4} />
                 </span>
-                <div className="w-11 h-11 rounded-2xl bg-[#FFC83D] border-2 border-neutral-900 flex items-center justify-center shrink-0 shadow-xs">
+                <div className="w-11 h-11 rounded-2xl bg-[#FFF3D6] border border-black/10 flex items-center justify-center shrink-0 shadow-xs">
                   <Users className="w-5 h-5 text-neutral-900" strokeWidth={2.2} />
                 </div>
               </div>

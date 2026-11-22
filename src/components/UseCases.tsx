@@ -380,7 +380,7 @@ export default function UseCases({ className }: { className?: string }) {
       buttonText: 'Record your first lesson',
       scene: 'teacher' as SceneKind,
       face: 'aina' as FaceName,
-      bgColor: '#BFD7F2',
+      bgColor: '#FFFFFF',
       rotation: 2.5,
       zIndex: 10,
       yVal: y1,
@@ -393,7 +393,7 @@ export default function UseCases({ className }: { className?: string }) {
       buttonText: 'Send a walkthrough',
       scene: 'freelancer' as SceneKind,
       face: 'ravi' as FaceName,
-      bgColor: '#FFD98A',
+      bgColor: '#FBFBFC',
       rotation: -2.2,
       zIndex: 20,
       yVal: y2,
@@ -406,7 +406,7 @@ export default function UseCases({ className }: { className?: string }) {
       buttonText: 'Answer with a video',
       scene: 'support' as SceneKind,
       face: 'mei' as FaceName,
-      bgColor: '#C9E8C6',
+      bgColor: '#FFFFFF',
       rotation: 1.8,
       zIndex: 30,
       yVal: y3,
@@ -419,7 +419,7 @@ export default function UseCases({ className }: { className?: string }) {
       buttonText: 'Make a clean tutorial',
       scene: 'creator' as SceneKind,
       face: 'leo' as FaceName,
-      bgColor: '#F6C4D2',
+      bgColor: '#FBFBFC',
       rotation: -1.6,
       zIndex: 40,
       yVal: y4,
@@ -432,7 +432,7 @@ export default function UseCases({ className }: { className?: string }) {
       buttonText: 'Record an update',
       scene: 'team' as SceneKind,
       face: 'sara' as FaceName,
-      bgColor: '#DCD5FD',
+      bgColor: '#FFFFFF',
       rotation: 2.2,
       zIndex: 50,
       yVal: y5,
@@ -445,7 +445,7 @@ export default function UseCases({ className }: { className?: string }) {
       buttonText: 'Record your demo',
       scene: 'student' as SceneKind,
       face: 'mei' as FaceName,
-      bgColor: '#FFE3C2',
+      bgColor: '#FBFBFC',
       rotation: -2.4,
       zIndex: 60,
       yVal: y6,
@@ -460,14 +460,13 @@ export default function UseCases({ className }: { className?: string }) {
       id="usecases"
       ref={sectionRef}
       className={
-        "relative w-full overflow-visible select-none transition-all duration-1000 ease-out px-4 sm:px-6 lg:px-8 bg-[#FFF8E7] py-12 md:py-16 lg:py-24 min-h-none lg:min-h-[520vh] border-b border-neutral-100 " +
+        "relative w-full overflow-visible select-none transition-all duration-1000 ease-out px-4 sm:px-6 lg:px-8 bg-[#F6F6F7] py-12 md:py-16 lg:py-24 min-h-none lg:min-h-[520vh] border-b border-neutral-100 " +
         (isFocused ? "blur-0 opacity-100 scale-100 " : "lg:blur-[8px] lg:opacity-75 lg:scale-[0.99] ") +
         (className || "")
       }
     >
       <style>{GOOGLE_FONTS_CSS}</style>
       {/* Left Running Camera Roll */}
-      <SectionCameraRolls />
 
       <div className="absolute bottom-10 left-10 w-96 h-96 bg-amber-100/30 rounded-full blur-3xl -z-10" />
 
@@ -506,7 +505,7 @@ export default function UseCases({ className }: { className?: string }) {
                 className="absolute inset-x-0 mx-auto flex items-center justify-center w-[920px]"
               >
                 <div 
-                  className="w-[920px] h-[340px] rounded-3xl p-10 flex items-center justify-between gap-12 shadow-xl border-[3px] border-neutral-900 relative overflow-hidden transition-all duration-300"
+                  className="w-[920px] h-[340px] rounded-3xl p-10 flex items-center justify-between gap-12 shadow-[0_1px_2px_rgba(17,17,19,0.05),0_24px_60px_rgba(17,17,19,0.10)] border border-black/[0.07] relative overflow-hidden transition-all duration-300"
                   style={{ backgroundColor: item.bgColor }}
                 >
                   
@@ -526,7 +525,7 @@ export default function UseCases({ className }: { className?: string }) {
                           text={item.buttonText}
                           icon={<ArrowRight className="w-4 h-4 shrink-0 ml-2" />}
                           iconPosition="right"
-                          className="inline-flex items-center text-neutral-900 font-bold text-base hover:text-[#E5382C] transition-colors pb-1 border-b-2 border-neutral-900 hover:border-[#FFC83D] cursor-pointer"
+                          className="inline-flex items-center text-neutral-900 font-bold text-base hover:text-[#A86F05] transition-colors pb-1 border-b-2 border-black/10 hover:border-[#F5B83D] cursor-pointer"
                         />
                       </div>
                     </div>
@@ -547,7 +546,7 @@ export default function UseCases({ className }: { className?: string }) {
             {testimonialsData.map((item, index: number) => (
               <div
                 key={index}
-                className="w-full rounded-2xl p-8 flex items-center justify-between gap-8 shadow-md border-[3px] border-neutral-900 relative overflow-hidden"
+                className="w-full rounded-2xl p-8 flex items-center justify-between gap-8 shadow-md border border-black/10 relative overflow-hidden"
                 style={{ backgroundColor: item.bgColor }}
               >
                 <div className="flex flex-col justify-between text-left flex-1">
@@ -564,7 +563,7 @@ export default function UseCases({ className }: { className?: string }) {
                         text={item.buttonText}
                         icon={<ArrowRight className="w-3.5 h-3.5 ml-1.5" />}
                         iconPosition="right"
-                        className="inline-flex items-center text-neutral-900 font-bold text-sm pb-1 border-b border-neutral-900 cursor-pointer"
+                        className="inline-flex items-center text-neutral-900 font-bold text-sm pb-1 border-b border-black/10 cursor-pointer"
                       />
                     </div>
                   </div>
@@ -582,7 +581,7 @@ export default function UseCases({ className }: { className?: string }) {
             {testimonialsData.map((item, index: number) => (
               <div
                 key={index}
-                className="w-full rounded-2xl p-6 flex flex-col gap-5 shadow-sm border-[3px] border-neutral-900 relative overflow-hidden text-left"
+                className="w-full rounded-2xl p-6 flex flex-col gap-5 shadow-sm border border-black/10 relative overflow-hidden text-left"
                 style={{ backgroundColor: item.bgColor }}
               >
                 <div>
@@ -604,7 +603,7 @@ export default function UseCases({ className }: { className?: string }) {
                     text={item.buttonText}
                     icon={<ArrowRight className="w-3 h-3 ml-1" />}
                     iconPosition="right"
-                    className="inline-flex items-center text-neutral-900 font-bold text-xs pb-1 border-b border-neutral-900 cursor-pointer"
+                    className="inline-flex items-center text-neutral-900 font-bold text-xs pb-1 border-b border-black/10 cursor-pointer"
                   />
                 </div>
               </div>

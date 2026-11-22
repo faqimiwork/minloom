@@ -200,7 +200,7 @@ const AcmeLogo = () => (
 const CapsuleLogo = () => (
   <div className="flex items-center gap-1.5 sm:gap-2 text-neutral-800 h-full select-none shrink-0">
     <div className="flex -space-x-1 sm:-space-x-1.5 h-[45%] sm:h-[55%] aspect-video items-center">
-      <div className="w-[55%] h-[55%] rounded-full border border-neutral-800 bg-[#FFF8E7] shrink-0" />
+      <div className="w-[55%] h-[55%] rounded-full border border-neutral-800 bg-[#F6F6F7] shrink-0" />
       <div className="w-[55%] h-[55%] rounded-full bg-neutral-800 shrink-0" />
     </div>
     <span className="font-sans font-extrabold text-xs sm:text-sm md:text-base tracking-tight leading-none">Capsule</span>
@@ -263,11 +263,11 @@ export default function SocialProof() {
     'MP4 that plays everywhere',
     'Camera bubble',
     'Clean recordings',
-    'Works without a webcam',
+    'Works without a webcam','Camera-only mode','Blur private info','Beautiful screenshots',
   ];
   const logos = promises.map((t) => (
     <span key={t} className="inline-flex items-center gap-2.5 text-[15px] sm:text-lg font-bold text-neutral-900 whitespace-nowrap">
-      <span className="w-6 h-6 rounded-full bg-[#FFC83D] border-2 border-neutral-900 inline-flex items-center justify-center text-[12px]">&#10003;</span>
+      <span className="w-6 h-6 rounded-full bg-[#F5B83D] border border-black/10 inline-flex items-center justify-center text-[12px]">&#10003;</span>
       {t}
     </span>
   ));
@@ -278,7 +278,6 @@ export default function SocialProof() {
     <section className="py-16 bg-white border-b border-neutral-100 overflow-hidden relative">
       <style>{GOOGLE_FONTS_CSS}</style>
       {/* Left Running Camera Roll */}
-      <SectionCameraRolls />
 
       <style>{`
         @keyframes marquee-scroll {
@@ -316,7 +315,7 @@ export default function SocialProof() {
                 variants={itemVariants}
                 className="inline-flex items-center justify-center gap-2 text-xs sm:text-sm font-semibold text-neutral-700 mb-4 select-none bg-white border border-neutral-200 rounded-full px-3.5 py-1.5"
               >
-                <span className="w-2 h-2 rounded-full bg-[#FF4B3E] animate-pulse" />
+                <span className="w-2 h-2 rounded-full bg-[#FF453A] animate-pulse" />
                 Built from the reviews of 12 popular screen recorders
               </motion.div>
 
@@ -337,7 +336,7 @@ export default function SocialProof() {
               <motion.a
                 variants={itemVariants}
                 href="#how-it-works"
-                className="text-base font-semibold text-neutral-800 hover:text-[#E5382C] flex items-center gap-1.5 transition-colors group cursor-pointer"
+                className="text-base font-semibold text-neutral-800 hover:text-[#A86F05] flex items-center gap-1.5 transition-colors group cursor-pointer"
               >
                 See how it works
                 <span className="transition-transform group-hover:translate-x-1">&rarr;</span>

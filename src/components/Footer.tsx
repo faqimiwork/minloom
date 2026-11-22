@@ -349,10 +349,9 @@ function AnimatedHeading({ text }: { text: string }) {
 
 export default function Footer() {
   return (
-    <footer id="get" className="bg-[#FFF8E7] border-t border-neutral-100 overflow-hidden relative select-none pt-12 pb-6">
+    <footer id="get" className="bg-[#F6F6F7] border-t border-neutral-100 overflow-hidden relative select-none pt-12 pb-6">
       <style>{GOOGLE_FONTS_CSS}</style>
       {/* Left Running Camera Roll */}
-      <SectionCameraRolls />
 
       <div className="max-w-[1180px] 2xl:max-w-[1380px] mx-auto px-4 sm:px-6 lg:px-16 2xl:px-24">
         
@@ -362,7 +361,7 @@ export default function Footer() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: false, amount: 0.2 }}
           transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] as const }}
-          className="relative w-full rounded-[36px] sm:rounded-[44px] bg-[#FFC83D] border-[3px] border-neutral-900 shadow-[0_10px_0_#17140F] p-10 sm:p-16 lg:p-20 overflow-hidden text-center flex flex-col items-center justify-center mb-10 sm:mb-12"
+          className="relative w-full rounded-[32px] sm:rounded-[40px] bg-[url('/hero-light.jpg')] bg-cover bg-center border border-black/5 shadow-[0_1px_2px_rgba(17,17,19,0.04)] p-10 sm:p-16 lg:p-20 overflow-hidden text-center flex flex-col items-center justify-center mb-10 sm:mb-12"
         >
           <div 
             className="absolute inset-0 opacity-[0.25] pointer-events-none"
@@ -382,13 +381,13 @@ export default function Footer() {
           </p>
 
           <div className="relative z-10 flex flex-wrap items-center justify-center gap-2.5 sm:gap-3 mt-6">
-            <span className="px-4 py-1.5 rounded-full bg-white text-xs sm:text-sm text-neutral-900 font-bold border-2 border-neutral-900">
+            <span className="px-4 py-1.5 rounded-full bg-white text-xs sm:text-sm text-neutral-900 font-bold border border-black/10">
               Camera bubble
             </span>
-            <span className="px-4 py-1.5 rounded-full bg-white text-xs sm:text-sm text-neutral-900 font-bold border-2 border-neutral-900">
+            <span className="px-4 py-1.5 rounded-full bg-white text-xs sm:text-sm text-neutral-900 font-bold border border-black/10">
               Clean recordings
             </span>
-            <span className="px-4 py-1.5 rounded-full bg-white text-xs sm:text-sm text-neutral-900 font-bold border-2 border-neutral-900">
+            <span className="px-4 py-1.5 rounded-full bg-white text-xs sm:text-sm text-neutral-900 font-bold border border-black/10">
               MP4 download
             </span>
           </div>
@@ -398,17 +397,17 @@ export default function Footer() {
               <AnimatedInteractiveButton
                 href={CHROME_STORE_URL}
                 text="Add to Chrome, it's free"
-                className="px-8 py-4 sm:px-10 rounded-full bg-neutral-900 text-[#FFC83D] font-bold text-base sm:text-lg hover:bg-white hover:text-neutral-900 border-[3px] border-neutral-900 active:scale-95 transition-all duration-300 cursor-pointer inline-flex items-center justify-center"
+                className="px-8 py-4 sm:px-10 rounded-full bg-neutral-900 text-white font-semibold text-base sm:text-lg hover:bg-neutral-700 border border-neutral-900 active:scale-95 transition-all duration-300 cursor-pointer inline-flex items-center justify-center"
               />
             ) : (
               <div className="flex flex-col items-center gap-3">
-                <span className="px-8 py-4 rounded-full bg-neutral-900 text-[#FFC83D] font-bold text-base sm:text-lg border-[3px] border-neutral-900">Launching soon on the Chrome Web Store</span>
+                <span className="px-8 py-4 rounded-full bg-neutral-900 text-white font-semibold text-base sm:text-lg border border-neutral-900">Launching soon on the Chrome Web Store</span>
                 <a href="mailto:support@minloom.com?subject=Tell%20me%20when%20MinLoom%20launches" className="text-sm font-bold text-neutral-900 underline underline-offset-4">Email me on launch day</a>
               </div>
             )}
           </div>
 
-          <div className="relative z-10 flex items-center justify-center gap-1.5 mt-10 sm:mt-11 text-xs sm:text-sm font-bold text-neutral-900 bg-white px-4 py-1.5 rounded-full border-2 border-neutral-900">
+          <div className="relative z-10 flex items-center justify-center gap-1.5 mt-10 sm:mt-11 text-xs sm:text-sm font-bold text-neutral-900 bg-white px-4 py-1.5 rounded-full border border-black/10">
             <Star className="w-3.5 h-3.5 fill-neutral-900 text-neutral-900" />
             <span>Works on Chrome, Edge and Brave</span>
           </div>
@@ -443,12 +442,12 @@ export default function Footer() {
               </h4>
               <ul className="space-y-2 text-xs sm:text-sm text-neutral-500">
                 <li>
-                  <a href="#features" className="hover:text-[#E5382C] transition-colors">
+                  <a href="#features" className="hover:text-[#A86F05] transition-colors">
                     Features
                   </a>
                 </li>
                 <li>
-                  <a href="#faqs" className="hover:text-[#E5382C] transition-colors">
+                  <a href="#faqs" className="hover:text-[#A86F05] transition-colors">
                     FAQ
                   </a>
                 </li>
@@ -461,17 +460,17 @@ export default function Footer() {
               </h4>
               <ul className="space-y-2 text-xs sm:text-sm text-neutral-500">
                 <li>
-                  <a href="/privacy" className="hover:text-[#E5382C] transition-colors">
+                  <a href="/privacy" className="hover:text-[#A86F05] transition-colors">
                     Privacy
                   </a>
                 </li>
                 <li>
-                  <a href="/terms" className="hover:text-[#E5382C] transition-colors">
+                  <a href="/terms" className="hover:text-[#A86F05] transition-colors">
                     Terms
                   </a>
                 </li>
                 <li>
-                  <a href="mailto:support@minloom.com" className="hover:text-[#E5382C] transition-colors">
+                  <a href="mailto:support@minloom.com" className="hover:text-[#A86F05] transition-colors">
                     support@minloom.com
                   </a>
                 </li>

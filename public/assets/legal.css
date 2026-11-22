@@ -1,0 +1,30 @@
+@font-face { font-family: "Inter"; font-weight: 400; font-display: swap; src: url("fonts/inter-latin-400-normal.woff2") format("woff2"); }
+@font-face { font-family: "Inter"; font-weight: 500; font-display: swap; src: url("fonts/inter-latin-500-normal.woff2") format("woff2"); }
+@font-face { font-family: "Inter"; font-weight: 600; font-display: swap; src: url("fonts/inter-latin-600-normal.woff2") format("woff2"); }
+:root { --ink: #111113; --ink-2: #3A3A40; --muted: #86868B; --line: rgba(17,17,19,0.08); --honey: #F5B83D; --honey-deep: #A86F05; }
+* { box-sizing: border-box; }
+html, body { margin: 0; }
+body { font-family: "Inter", -apple-system, BlinkMacSystemFont, system-ui, sans-serif; color: var(--ink); background: #FFFFFF; -webkit-font-smoothing: antialiased; line-height: 1.6; }
+a { color: var(--honey-deep); }
+.wrap { max-width: 760px; margin: 0 auto; padding: 0 24px; }
+.nav { position: sticky; top: 0; z-index: 10; background: rgba(255,255,255,0.85); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border-bottom: 1px solid var(--line); }
+.nav-in { display: flex; align-items: center; justify-content: space-between; height: 60px; }
+.wordmark { display: inline-flex; align-items: center; gap: 8px; color: var(--ink); text-decoration: none; font-weight: 600; letter-spacing: -0.03em; font-size: 18px !important; }
+.wordmark img { width: 26px; height: 26px; }
+.wordmark .dot { display: none; }
+.nav-links { display: flex; gap: 20px; }
+.nav-links a { color: var(--ink-2); text-decoration: none; font-size: 14px; }
+.nav-links a:hover { color: var(--ink); }
+.legal { padding: 56px 0 80px; }
+.doc h1 { font-size: 40px; font-weight: 600; letter-spacing: -0.04em; line-height: 1.1; margin: 0 0 8px; }
+.doc h2 { font-size: 20px; font-weight: 600; letter-spacing: -0.02em; margin: 36px 0 8px; }
+.doc p, .doc li { color: var(--ink-2); font-size: 15.5px; }
+.updated { color: var(--muted); font-size: 14px; margin: 0 0 28px; }
+footer { border-top: 1px solid var(--line); padding: 28px 0; color: var(--muted); font-size: 13px; }
+.foot-in { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+footer a { color: var(--ink-2); text-decoration: none; margin-left: 16px; }
+.doc table { width: 100%; border-collapse: collapse; margin: 8px 0 16px; }
+.doc th, .doc td { text-align: left; vertical-align: top; padding: 12px 0; border-bottom: 1px solid var(--line); font-size: 15px; }
+.doc th { width: 34%; padding-right: 16px; font-weight: 600; color: var(--ink); }
+.doc td { color: var(--ink-2); }
+.doc ul { padding-left: 20px; }
